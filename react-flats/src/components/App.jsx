@@ -1,20 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import FlatCardList from './FlatCardList';
 import Map from './Map';
 import flats from './flats';
 
 const App = () => {
-  // const [ isSelected, setIsSelected ] = useState(false);
-  // const [ newFlatsList, setNewFlatsList ] = useState(flats);
+  const [ newFlatsList, setNewFlatsList ] = useState(flats);
 
-  // const onClickSelected = (index) => {
-  //   console.log([...FlatCards]);
-  // };
+
+  const onClickSelected = (index) => {
+    const newFlats = Array.from(flats);
+    newFlats.forEach((flat) => {
+      flat.selected = false;
+    });
+    newFlats[index].selected = true;
+    setNewFlatsList(newFlats);
+  };
 
   return (
     <div>
       <div className="flex-left">
-        <FlatCardList flats={flats} />
+        <FlatCardList flats={newFlatsList} onClickSelected={onClickSelected} />
       </div>
       <div className="flex-right">
         <Map />

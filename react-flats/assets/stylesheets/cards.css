@@ -1,0 +1,48 @@
+.card {
+  cursor: pointer;
+  height: 230px;
+  width: 47%;
+  padding: 10px;
+  margin: 5px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  background-size: cover !important;
+  background-position: center;
+  color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card.active {
+  border: 10px solid red;
+}
+.card__price {
+  font-size: 15px;
+  text-transform: uppercase;
+}
+.card__description {
+  width: 100%;
+}
+
+.card-user {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+  background: black;
+  opacity: 0;
+}
+
+.card-link:hover {
+  opacity: 0.1;
+}/*# sourceMappingURL=cards.css.map */
