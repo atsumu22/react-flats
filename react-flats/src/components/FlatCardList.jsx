@@ -20,6 +20,7 @@ const FlatCardList = (props) => {
               </div>
             </div>
           );
+          // <FlatCard flat={flat} onClickSelected={onClickSelected} index={index} />
         })}
       </div>
     </div>
